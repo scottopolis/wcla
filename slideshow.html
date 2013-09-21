@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <!--[if lt IE 9]>
+  <script src="lib/html5shim.js"></script>
+  <![endif]-->  
+  
+  <!-- These are some core styles the slideshow app requires -->
+  <link rel="stylesheet" href="lib/styles.css" />
+  
+  <!-- These are the styles you'll add to make the slides look great -->
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <title>Lesser Known But Super Hip RWD Tricks</title>
+</head>
+<body>
+  <header>
+    <h1>Lesser Known But Super Hip RWD Tricks</h1>
+    <nav>
+      <ul>
+        <li><button id="prev-btn" title="Previous slide">Previous Slide</button></li>
+        <li><span id="slide-number"></span>/<span id="slide-total"></span></li>
+        <li><button id="next-btn" title="Next Slide">Next Slide</button></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="deck">
+    
+    <!-- Begin slides -->
+    <section>
+      <img src="images/title.png"/>
+    </section>
+    <section>
+      <img src="images/me.png"/>
+    </section>
+    <section>
+      <img src="images/devices.png"/>
+    </section>
+    <section>
+      <img src="images/stats.png"/>
+    </section>
+    <section>
+      <img src="images/optional.png"/>
+    </section>
+    <section>
+      <img src="images/but-but.png"/>
+    </section>
+    <section>
+      <img src="images/wambulance.png"/>
+    </section>
+    <section>
+      <img src="images/size-independent.png"/>
+    </section>
+    <section>
+      <img src="images/device-independent.png"/>
+    </section>
+    <section>
+      <img src="images/res-independent.png"/>
+    </section>
+    <section>
+      <img src="images/content-performance-ux.png"/>
+    </section>
+    <section>
+      <img src="images/grigsby.png"/>
+    </section>
+    <section>
+      <img src="images/rwdfail1.png"/>
+    </section>
+    <section>
+      <img src="images/rwdfail2.png"/>
+    </section>
+    <section>
+      <img src="images/rwdfail3.png"/>
+    </section>
+    <section>
+      <img src="images/rwdfail4.png"/>
+    </section>
+    <section>
+      <img src="images/px-em-rem1.png"/>
+    </section>
+    <section>
+      <img src="images/px-em-rem2.png"/>
+    </section>
+    <section>
+      <img src="images/em-cascade.png"/>
+    </section>
+    <section>
+      <img src="images/whats-a-girl.png"/>
+    </section>
+    <section>
+      <img src="images/use-rem.png"/>
+    </section>
+    <section>
+      <img src="images/rem.png"/>
+    </section>
+    <section>
+      <img src="images/rem-support.png"/>
+    </section>
+    <section>
+      <img src="images/em-mq-1.png"/>
+    </section>
+    <section>
+      <img src="images/em-mq-2.png"/>
+    </section>
+    <section>
+      <img src="images/why-ems.jpg"/>
+    </section>
+    <section>
+      <img src="images/vert-mq.png"/>
+    </section>
+    <section>
+      <p data-height="700" data-theme-id="0" data-slug-hash="eAhFq" data-user="scottb" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/anon/pen/eAhFq'>Vertical Media Queries</a> by Scott Bolinger (<a href='http://codepen.io/scottb'>@scottb</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <p><a href="http://codepen.io/scottb/details/eAhFq" target="_blank">http://codepen.io/scottb/details/eAhFq</a></p>
+    </section>
+    <section>
+      <img src="images/res-images-1.png"/>
+    </section>
+    <section>
+      <img src="images/res-images-2.png"/>
+    </section>
+    <section>
+      <img src="images/res-images-3.png"/>
+    </section>
+    <section>
+      <img src="images/res-images-4.png"/>
+    </section>
+    <section>
+      <img src="images/res-images-5.png"/>
+    </section>
+    <section>
+      <img src="images/off-canvas-nav-1.png"/>
+    </section>
+    <section>
+      <p data-height="700" data-theme-id="0" data-slug-hash="javhr" data-user="scottb" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/anon/pen/javhr'>Simple Responsive Off Canvas Navigation Menu</a> by Scott Bolinger (<a href='http://codepen.io/scottb'>@scottb</a>) on <a href='http://codepen.io'>CodePen</a></p>
+    </section>
+    <section>
+      <img src="images/off-canvas-nav.png"/>
+    </section>
+    <section>
+      <img src="images/icon-fonts.png"/>
+    </section>
+    <section>
+      <img src="images/icon-fonts-2.jpg"/>
+    </section>
+    <section>
+      <img src="images/icon-fonts-3.png"/>
+    </section>
+    <section>
+      <img src="images/svg.jpg"/>
+    </section>
+    <section>
+      <img src="images/thanks.jpg"/>
+    </section>
+    <!-- /End slides -->
+    
+  </div>
+  <!-- /deck -->
+  <script src="lib/jquery-1.5.2.min.js"></script>
+  <script async src="http://codepen.io/assets/embed/ei.js"></script>
+  <script src="lib/jquery.jswipe-0.1.2.js"></script>  
+  <script src="lib/htmlSlides.js"></script>
+  <script>
+    //Do our business when the DOM is ready for us
+    $(function() {
+      
+      //You can trigger Javascript based on the slide number like this:
+      $('html').bind('newSlide', function(e, id) { 
+        switch(id) {
+          case 2:
+            console.log('This is the second slide.');;
+            break;
+          case 3:
+            console.log('Hello, third slide.');
+            break;
+        }
+      });
+
+      //One little option: hideToolbar (boolean; default = false)
+      htmlSlides.init({ hideToolbar: true });
+      
+    });
+  </script>
+  </body>
+</html>
